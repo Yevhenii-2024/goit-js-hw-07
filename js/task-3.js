@@ -3,10 +3,11 @@ const spanText = document.querySelector('span#name-output');
 
 textInput.addEventListener('input', userText);
 
-function userText(text) {
-    if (textInput.value.trim()) {
+function userText(event) {
+    const inputText = event.target.value.trim();
+    if (inputText) {
         spanText.textContent = textInput.value.trim();
-    } else if (textInput.trim()) {
+    } else {
         spanText.textContent = 'Anonymous';
     }
 }
