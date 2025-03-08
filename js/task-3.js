@@ -6,7 +6,7 @@ textInput.addEventListener('input', userText);
 function userText(event) {
     const inputText = event.target.value.trim();
     if (inputText) {
-        spanText.textContent = textInput.value.trim();
+        spanText.textContent = inputText;
     } else {
         spanText.textContent = 'Anonymous';
     }
